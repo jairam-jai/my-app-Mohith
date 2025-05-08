@@ -1,0 +1,16 @@
+.parent {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+}
+.box-one {
+    width: 80%;
+    height: 100%;
+    background-color: black;
+}
+.box-one {
+    width: 20%;
+    height: 100%;
+    background-color: rgb(186, 71, 71);
+}
