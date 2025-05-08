@@ -5,12 +5,43 @@
     display: flex;
 }
 .box-one {
-    width: 80%;
-    height: 100%;
-    background-color: black;
-}
-.box-one {
     width: 20%;
     height: 100%;
-    background-color: rgb(186, 71, 71);
+    background-color: rgba(28, 18, 18, 0.983);
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    color: white;
 }
+.box-two {
+    width: 80%;
+    height: 100%;
+    /* background-image: url("/assets/Photos/img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.my-web {
+    color: white;
+    padding: 10px 20px;
+}
+.dashbord-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 10%;
+    margin: 0px -200px;
+}
+.button-dashbord {
+    width: 40%;
+    height: 7vh;
+    background-color: rgb(166, 49, 13);
+    border-radius: 30px;
+}
+.button-dashbord:hover {
+    background-color: blue;
+    color: chartreuse;
+
+}
+

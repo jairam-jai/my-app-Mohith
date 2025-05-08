@@ -1,9 +1,21 @@
 <div class="parent">
     <div class="box-one">
-        <h1>Dashbord</h1>
-        <h3 routerLink="/dashbord/home">Home</h3>
-        <h3 routerLink="/login">Login</h3>
+        <h2 class="my-web">My Website</h2>
 
+          <div class="dashbord-content">
+            <h4 routerLink="/dashbord">Home</h4>
+            <h4 routerLink="/dashbord/wellcome">Wellcome</h4>
+            <h4>Data Binding</h4>
+            <h4 routerLink="/dashbord/calcultor">Calcultor</h4>
+            <h4 routerLink="/dashbord/rectangle">Rectangle</h4>
+            <h4 routerLink="/dashbord/circle">Circle</h4>
+            <h4 routerLink="/dashbord/bmi">BMI</h4>
+
+            <button class="button-dashbord">Logout</button>
+    
+
+        </div>
+       
     </div>
     <div class="box-two">
         <router-outlet></router-outlet>
