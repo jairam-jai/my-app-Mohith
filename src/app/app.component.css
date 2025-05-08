@@ -1,0 +1,27 @@
+.parent{
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.box-one {
+    width: 25%;
+    height: 40%;
+    background-color: black;
+}
+
+.box-two {
+    width: 25%;
+    height: 40%;
+    background-color: rgb(195, 16, 16);
+}
+
+.box-three {
+    width: 25%;
+    height: 40%;
+    background-color: rgb(117, 23, 199);
+}
