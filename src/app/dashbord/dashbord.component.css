@@ -1,7 +1,7 @@
 .parent {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color: rgb(219, 219, 232);
     display: flex;
 }
 .box-one {
@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 2px;
     padding: 10%;
     margin: 0px -200px;
 }

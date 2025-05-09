@@ -1,0 +1,32 @@
+<h1>Directives</h1>
+
+<h4 *ngFor="let age of ages">{{age}}</h4>
+
+<ol>
+    <li *ngFor="let age of ages">{{age}}</li>
+</ol>
+
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<table border="2">
+    <thead>
+        <tr>
+            <th>Person Name</th>
+            <th>Person Number</th>
+            <th>Person Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let detel of detiles">
+            <td>{{detel.name}}</td>
+            <td [ngStyle]="{'color':detel.number<=400?'green':'red'}">{{detel.number}}</td>
+            <td [ngClass]="{'green':detel.email>3.5, 'yellow':((detel.email>2.5)&&(detel.email<=3.5)),'red':(detel.email<=2.5)}">{{detel.email}}</td>
+
+        </tr>
+    </tbody>
+</table>
+
+<h3 *ngIf="false">Hello</h3>
+<h3 *ngIf="true">Hii hello Well come</h3>
