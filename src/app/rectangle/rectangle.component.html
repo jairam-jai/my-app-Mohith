@@ -4,21 +4,21 @@
 
         <div class="input-bar">
             <label>Lenght :</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num1">
     
             <label>Breath :</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num2">
 
         </div>
 
         <div class="button-bar">
-            <button class="button-one">Area</button>
-            <button class="button-one">Perimeter</button>
+            <button class="button-one" (click)="area()">Area</button>
+            <button class="button-one" (click)="perimeter()">Perimeter</button>
 
         </div>
 
         <div class="result">
-            <h3>Result in : 60</h3>
+            <h3>Result:{{sum}}</h3>
 
         </div>
     </div>

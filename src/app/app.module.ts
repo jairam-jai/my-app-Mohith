@@ -12,6 +12,9 @@ import { CalcultorComponent } from './calcultor/calcultor.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { from, fromEvent } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { BmiComponent } from './bmi/bmi.component';
     CalcultorComponent,
     RectangleComponent,
     CircleComponent,
-    BmiComponent
+    BmiComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

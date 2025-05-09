@@ -4,23 +4,23 @@
 
         <div class="input-bar">
             <label>Number 1:</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num1">
     
             <label>Number 2:</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num2">
 
         </div>
        
 
         <div class="button-bar">
-            <button class="button-one">Sum</button>
-            <button class="button-one">Sub</button>
-            <button class="button-one">Mul</button>
-            <button class="button-one">Div</button>
+            <button class="button-one" (click)="Sum()" [disabled]="(num1==0)||(num2==0)">Sum</button>
+            <button class="button-one" (click)="Sub()" [disabled]="(num1==0)||(num2==0)">Sub</button>
+            <button class="button-one" (click)="mul()" [disabled]="(num1==0)||(num2==0)">Mul</button>
+            <button class="button-one" (click)="div()" [disabled]="(num1==0)||(num2==0)">Div</button>
         </div>
 
         <div class="result">
-            <h4>XXXXXXXXXXXXX</h4>
+            <h4>Result:{{sum}}</h4>
 
         </div>
     </div>

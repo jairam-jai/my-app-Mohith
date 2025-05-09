@@ -4,20 +4,20 @@
 
         <div class="input-bar">
             <label>Height :</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num1">
     
             <label>Weight :</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num2">
 
         </div>
        
 
         <div class="button-bar">
-            <button class="button-one">Calculate</button>
+            <button class="button-one" (click)="calcute()">Calculate</button>
         </div>
 
         <div class="result">
-            <h4>You are BMI is: 0</h4>
+            <h4>You are BMI is:{{bmi}}</h4>
 
         </div>
     </div>

@@ -4,19 +4,19 @@
 
         <div class="input-bar">
             <label>Redlus :</label>
-            <input type="number" class="input-check">
+            <input type="number" class="input-check" [(ngModel)]="num">
 
         </div>
        
 
         <div class="button-bar">
-            <button class="button-one">Area</button>
-            <button class="button-one">Perimeter</button>
+            <button class="button-one" (click)="area()">Area</button>
+            <button class="button-one" (click)="peri()">Perimeter</button>
             
         </div>
 
         <div class="result">
-            <h4>Result in 78.5</h4>
+            <h4>Result in:{{b}}</h4>
 
         </div>
     </div>
