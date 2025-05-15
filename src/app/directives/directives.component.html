@@ -1,4 +1,9 @@
-<h1>Directives</h1>
+
+
+<div class="div-parent">
+
+<div class="div-one">
+    <h1>Directives</h1>
 
 <h4 *ngFor="let age of ages">{{age}}</h4>
 
@@ -6,11 +11,17 @@
     <li *ngFor="let age of ages">{{age}}</li>
 </ol>
 
-<select name="" id="">
+
+<div class="table-row">
+    <select name="" id="">
     <option *ngFor="let state of states">{{state}}</option>
 </select>
 
-<table border="2">
+
+</div>
+
+<div class="div-two">
+    <table border="2">
     <thead>
         <tr>
             <th>Person Name</th>
@@ -21,12 +32,68 @@
     <tbody>
         <tr *ngFor="let detel of detiles">
             <td>{{detel.name}}</td>
-            <td [ngStyle]="{'color':detel.number<=400?'green':'red'}">{{detel.number}}</td>
+            <!-- <td [ngStyle]="{'color':detel.number<=400?'green':'red'}">{{detel.number}}</td> -->
             <td [ngClass]="{'green':detel.email>3.5, 'yellow':((detel.email>2.5)&&(detel.email<=3.5)),'red':(detel.email<=2.5)}">{{detel.email}}</td>
 
         </tr>
     </tbody>
 </table>
+<h3 *ngIf="true">Hello</h3>
+<h3 *ngIf="false">Hii hello Well come</h3>
 
-<h3 *ngIf="false">Hello</h3>
-<h3 *ngIf="true">Hii hello Well come</h3>
+<!-- pipes -->
+ <h3>{{today}}</h3>
+ <h3>{{today | date}}</h3>
+ <h3>{{today | date:'dd-MM-yyyy'}}</h3>
+ <h3>{{today | date:'hh-mm-ss'}}</h3>
+
+</div>
+  
+<select (change)="rolefilter()" [(ngModel)]="role">
+    <option value="UIdevalapar">UI Devalapar</option>
+    <option value="software devalapar">Software Devalapar</option>
+    <option value="data devalapar">Data Devalapar</option>
+    <option value="testing devalapar">Tasting Devalapar</option>
+
+</select>
+<input type="text" placeholder="Enter the search" [(ngModel)]="term" (keyup)="search()">
+<button (click)="addbouns()">Add 50k Bonus</button><br>
+<label for="">Name:</label>
+<input type="text" [(ngModel)]="name"><br>
+<label for="">emperience:</label>
+<input type="number" [(ngModel)]="experience"><br>
+<label for="">package:</label>
+<input type="number" [(ngModel)]="package"><br>
+<label for="">role:</label>
+<input type="text" [(ngModel)]="role"><br>
+<button (click)=" add()">Add  employee</button>
+
+<table border="2">
+    <thead >
+        <tr>
+            <th>S .No</th>
+            <th> Name</th>
+            <th> Experience</th>
+            <th> Package</th>
+            <th>Role</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of employees; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{data.name | uppercase}}</td>
+            <td [ngStyle]="{'color':data.expression<7?'green':'red'}">{{data.expression}}</td>
+            <td>{{data.package}}</td>
+            <td>{{data.role}}</td>
+            <td><button (click)="delete(i)">Delete</button></td>
+        </tr>
+
+    </tbody>
+</table>
+        <button (click)="Hightolow()">higth To low</button>
+
+
+</div>
+
+</div>

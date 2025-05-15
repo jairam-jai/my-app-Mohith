@@ -1,0 +1,18 @@
+.overflow {
+    overflow: auto;
+   
+}
+.color-bar {
+    color: rgb(2, 6, 10);
+
+}
+.color-bar:hover{
+color: red;
+}
+.black{
+    color: black;
+    font-weight: 900;
+}
+.grey {
+    color: gray;
+}

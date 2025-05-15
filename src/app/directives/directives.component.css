@@ -7,3 +7,11 @@
 .red {
     color: red;
 }
+
+.div-parent {
+    display: flex;
+    gap: 5%;
+}
+.table-row {
+    display: flex;
+}

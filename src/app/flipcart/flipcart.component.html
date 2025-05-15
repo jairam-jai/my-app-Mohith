@@ -1,0 +1,11 @@
+<div class="parent" >
+
+  <div class="child" *ngFor="let data of flipcart">
+    <img src="{{data.image}}" alt="" class="imge-class">
+ <h4 class="heading">{{data.rating.rate}}</h4>
+   <h4>{{data.category}}</h4>
+   <p>Keeping your feet well-protected is crucial when you are hitting the roads.</p>
+   <h4 class="text-danger">Rs.{{data.price}}</h4>
+  </div>
+
+</div>

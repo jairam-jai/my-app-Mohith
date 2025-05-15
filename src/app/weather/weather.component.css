@@ -1,0 +1,32 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.sun {
+    width: 6%;
+    height: 10vh;
+    /* background-color: blue; */
+    border-radius: 50%;
+}
+.weather-color {
+    color: red;
+    font-size: 50px;
+}
+.blue {
+    background-color: rgb(10, 10, 198);
+  
+}
+.yellow {
+    background-color: yellow;
+   
+}
+.green {
+    background-color: green;
+    
+}
+.red {
+    background-color: red;
+}

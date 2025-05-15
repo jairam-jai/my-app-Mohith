@@ -1,0 +1,22 @@
+.paren {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 30px;
+}
+.child-on {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+a {
+    position: absolute;
+    top: 35%;
+    left:35%;
+    display: none;
+}
+.child-on:hover a{
+display: block;
+}

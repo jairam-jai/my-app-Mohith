@@ -1,0 +1,22 @@
+<div class="parent">
+
+    <p class="time-today"> Time:{{weatherdata.current_weather.time}} | {{weatherdata.current_weather_units.time}}</p>
+    <h3>Weather in Hyderabad</h3>
+    <div class="sun green"[ngClass]="{'blue':weatherdata.current_weather.temperature<0, 'yellow': (weatherdata.current_weather.temperature>0)&& 
+    (weatherdata.current_weather.temperature<=30 ), 'green':(weatherdata.current_weather.temperature>30)&& (weatherdata.current_weather.temperature<35), 
+    'red':weatherdata.current_weather.temperature>35}"></div>
+
+   
+    <h2 class="weather-color">{{weatherdata.current_weather.temperature}}
+        {{weatherdata.current_weather_units.temperature}}</h2>
+
+    <h4>Wind Speed:{{weatherdata.current_weather.windspeed}}
+        {{weatherdata.current_weather_units.windspeed}}</h4>
+    <h4>Wind Direction:{{weatherdata.current_weather.winddirection}}
+        {{weatherdata.current_weather_units.winddirection}}</h4>
+
+    <h2 *ngIf="weatherdata.
+current_weather.is_day==1">daytime</h2>
+ <h2 *ngIf="weatherdata.
+current_weather.is_day==0">Night</h2>
+ </div>

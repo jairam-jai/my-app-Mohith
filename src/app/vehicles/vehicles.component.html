@@ -1,0 +1,72 @@
+
+<input type="text" placeholder="Enter to search" [(ngModel)]="keyword"  (keyup)="search()">
+
+
+<select [(ngModel)]="column">
+    <option value="Vehicle">Vehicle Name</option>
+    <option value="color">Color</option>
+    <option value="cost">Vehicle Name</option>
+  <option value="fuel">Fuel</option>
+</select>
+
+<select [(ngModel)]="order">
+    <option value="asc">Assending order</option>
+    <option value="desc">Dissending Order</option>
+   
+</select>
+<button (click)="sort()">CLick</button>
+
+
+<!-- pagenaction -->
+
+<select [(ngModel)]="limit">
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="30">30</option>
+  <option value="50">50</option>
+</select>
+
+<select [(ngModel)]="page">
+    <option value="1">1</option>
+    <option value="2">2</option>
+     <option value="3">3</option>
+    <option value="4">4</option>
+
+
+   
+</select>
+<button (click)="pagenaction()">Pagenaction</button>
+<button routerLink="/dashbord/createvehicle">Create</button>
+
+<table border="2" class="table table-hover">
+    <thead >
+        <tr>
+            <th>vehicles</th>
+            <th>color</th>
+            <th>cost</th>
+            <th>fuel</th>
+            <th>id</th>
+            <th>image</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>types</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of vehicles; let i=index">
+            <!-- <td>{{i+1}}</td> -->
+            <td>{{data.Vehicle| uppercase}}</td>
+            <td [ngStyle]="{'color':data.expression<7?'green':'red'}">{{data.color}}</td>
+            <td>{{data.cost}}</td>
+            <td>{{data.fuel}}</td>
+            <td>{{data.id}}</td>
+            <td><img src="{{data.image}}" alt=""></td> 
+            <td>{{data.manufacturer}}</td>
+            <td>{{data.model}}</td>
+            <td>{{data.tyres}}</td>
+            <td><Button class="btn btn-danger" (click)="delete(data.id)">Delete</Button></td>
+        </tr>
+
+    </tbody>
+</table>

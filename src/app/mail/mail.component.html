@@ -1,0 +1,8 @@
+
+<div class="overflow">
+    <ul  *ngFor="let datamail of maildata">
+    <li class="color-bar" [ngClass]="{'black':datamail.completed==false, 'grey':((datamail.completed==true))}">{{datamail.title}}</li>
+
+</ul>
+
+</div>

@@ -14,8 +14,17 @@ import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { from, fromEvent } from 'rxjs';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeDataComponent } from './employe-data/employe-data.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FlipcartComponent } from './flipcart/flipcart.component';
+import { MailComponent } from './mail/mail.component';
+import { WeatherComponent } from './weather/weather.component';
+import { ImagetaskComponent } from './imagetask/imagetask.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+
 
 @NgModule({
   declarations: [
@@ -30,13 +39,22 @@ import { DirectivesComponent } from './directives/directives.component';
     CircleComponent,
     BmiComponent,
     DataBindingComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeDataComponent,
+    VehiclesComponent,
+    FlipcartComponent,
+    MailComponent,
+    WeatherComponent,
+    ImagetaskComponent,
+    CreatevehicleComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
