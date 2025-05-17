@@ -1,0 +1,23 @@
+<div>
+    
+</div>
+<form [formGroup]="newcard">
+    <label>Name:</label>
+    <input type="text" formControlName="name"><br>
+     <label>City:</label>
+    <input type="text" formControlName="city"><br>
+     <label>DofB:</label>
+    <input type="date" formControlName="dob"><br>
+     <label>Email:</label>
+    <input type="text" formControlName="email"><br>
+     <label>profile_picture:</label>
+     <input type="text" formControlName="profile_picture"><br>
+     <label>SehoolName:</label>
+     <input type="text" formControlName="school_name"><br>
+     <label>SehoolPin:</label>
+     <input type="number" formControlName="school_pin"><br>
+     <label>SchoolCity:</label>
+     <input type="text" formControlName="school_city"><br>
+
+     <button (click)="addstudent()">AddtoCard</button>
+</form>

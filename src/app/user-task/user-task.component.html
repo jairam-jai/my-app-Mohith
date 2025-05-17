@@ -1,0 +1,73 @@
+<div>
+<form  [formGroup]="usertaskform">
+<label for="">Name: </label>
+<input type="text" formControlName="name"><br>
+<label for="">Class: </label>
+<input type="number" formControlName="class"><br>
+<label for="">FatherName: </label>
+<input type="text" formControlName="fathername"><br>
+<label for="">DateOfBarth: </label>
+<input type="date" formControlName="dob"><br>
+
+<div formGroupName="address">
+    <label for="">AddressLine:</label>
+    <input type="number" formControlName="addressline"><br>
+    <label for="">City: </label>
+   <input type="text" formControlName="city"><br>
+   <label for="">state: </label>
+  <input type="text" formControlName="state"><br>
+  <label for="">Pincode: </label>
+<input type="number" formControlName="pincode"><br>
+
+</div>
+
+
+<!-- Dynamic forms -->
+<label for="">Type: </label>
+<input type="radio" name="type" value="dayschoolor" formControlName="type">
+<label for="">Day Schoolor</label>
+<input type="radio" name="type" value="residential" formControlName="type">
+<label for="">Residential</label>
+
+
+
+<div *ngIf="usertaskform.get('type')?.value=='dayschoolor'" >
+    <label for="">Bus Fee</label>
+    <input type="number" formControlName="busfee">
+</div>
+
+<div *ngIf="usertaskform.get('type')?.value=='residential'">
+    <label for="">Hostel Fee</label>
+    <input type="number" formControlName="hostelfee">
+</div><br>
+
+
+<!-- ArrayForms -->
+ <label for="">Marks:</label>
+ <button class="btn btn-success" (click)="addmarks()">Addmarks</button>
+
+ <div formArrayName="marks">
+    <div *ngFor="let mark of marksArray.controls; let i=index" >
+        <div formGroupName='{{i}}'>
+            <label for="">Class:</label>
+            <input type="text" formControlName="class"><br>
+             <label for="">Year:</label>
+            <input type="text" formControlName="year"><br>
+             <label for="">Percentage:</label>
+            <input type="text" formControlName="percentage"><br>
+
+        </div>
+        <button (click)="deletemark(i)">Delete</button>
+
+    </div>
+
+ </div>
+
+
+
+</form>
+
+
+<button (click)=" submit()" class="btn btn-primary">Submit</button>
+
+</div>

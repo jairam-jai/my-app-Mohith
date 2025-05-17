@@ -1,0 +1,77 @@
+<!-- nestedforms -->
+
+<form  [formGroup]="userform">
+    <label>Name: </label>
+    <input type="text" formControlName="name"><br>
+    <div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
+        <p *ngIf="userform.get('name')?.errors?.['required']">Name: Should Requierd...</p>
+        <p *ngIf="userform.get('name')?.errors?.['minlength']">Name: Should minimum 6 letters..</p>
+        <p *ngIf="userform.get('name')?.errors?.['maxlength']">Name: Should minimum 12 letters...</p>
+    </div>
+
+    <label>Mobile: </label>
+    <input type="number" formControlName="mobile"><br>
+    <label>email: </label>
+    <input type="email" formControlName="email"><br>
+    <label>password: </label>
+    <input type="password" formControlName="password"><br>
+    <div formGroupName="address">
+        <label for="">City:</label>
+        <input type="text" formControlName="city"><br>
+        <label for="">State:</label>
+        <input type="text" formControlName="state"><br>
+        <label for="">Pincode:</label>
+        <input type="number" formControlName="pincode"><br>
+
+
+    </div>
+<!-- dynamic forms -->
+    <label for="">Type: </label>
+    <input type="radio" name="type" value="daySchool" formControlName="type">
+    <label for="">Day Scholer</label>
+    <input type="radio" name="type" value="residential" formControlName="type">
+    <label for="">Residential</label>
+
+    <div *ngIf="userform.get('type')?.value=='daySchool'">
+        <label for="">Bus Fee</label>
+        <input type="number" formControlName="busfee">
+    </div>
+    <div *ngIf="userform.get('type')?.value=='residential'">
+        <label for="">Hostel Fee</label>
+        <input type="number"formControlName=hostelfee >
+    </div>
+
+    <!-- formArrays -->
+<label for="">cards:</label>
+<button class="btn btn-success" (click)="addcard()">AddCard</button>
+<button routerLink="/dashbord/user-task">Add Person</button>
+
+
+<div formArrayName="cards">
+    <div *ngFor="let card of CardsFormsArry.controls; let i=index"  >
+        <div formGroupName="{{i}}">
+            <label for="">number</label>
+            <input type="number" formControlName="number">
+            <label for="">name:</label>
+            <input type="text" formControlName="name">
+             <label for="">Expiry</label>
+            <input type="month" formControlName="expiry">
+             <label for="">cvv</label>
+            <input type="number" formControlName="cvv">
+
+        </div>
+<button class="btn btn-danger" (click)="deletecard(i)">Delete</button>
+<button (click)="submit()" class="btn btn-primary">Submit</button>
+
+
+    </div>
+</div>
+
+
+
+
+
+   
+   <button (click)="submit()" class="btn btn-primary">Submit</button>
+
+</form>

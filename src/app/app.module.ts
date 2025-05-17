@@ -24,6 +24,12 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ImagetaskComponent } from './imagetask/imagetask.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { CreatestudentCartComponent } from './createstudent-cart/createstudent-cart.component';
+import { AddcardComponent } from './addcard/addcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { UserTaskComponent } from './user-task/user-task.component';
+import { AccountusapiComponent } from './accountusapi/accountusapi.component';
+import { AddacountComponent } from './addacount/addacount.component';
 
 
 @NgModule({
@@ -47,6 +53,12 @@ import { CreatevehicleComponent } from './createvehicle/createvehicle.component'
     WeatherComponent,
     ImagetaskComponent,
     CreatevehicleComponent,
+    CreatestudentCartComponent,
+    AddcardComponent,
+    CreateUserComponent,
+    UserTaskComponent,
+    AccountusapiComponent,
+    AddacountComponent,
   
   ],
   imports: [

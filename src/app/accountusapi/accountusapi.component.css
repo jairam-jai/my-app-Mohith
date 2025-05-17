@@ -1,0 +1,6 @@
+.parent-class {
+    width: 100%;
+    height: 120vh;
+    background-color: black;
+    overflow: auto;
+}

@@ -18,10 +18,17 @@ import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
 import { ImagetaskComponent } from './imagetask/imagetask.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { CreatestudentCartComponent } from './createstudent-cart/createstudent-cart.component';
+import { AddcardComponent } from './addcard/addcard.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { UserTaskComponent } from './user-task/user-task.component';
+import { AccountusapiComponent } from './accountusapi/accountusapi.component';
+import { AddacountComponent } from './addacount/addacount.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashbord',component:DashbordComponent,children:[
+  {path:'dashbord',component:DashbordComponent,canActivate:[AuthenticationGuard],children:[
     {path:'',component:HomeComponent},
     {path:'wellcome',component:WellcomeComponent},
     {path:'calcultor',component:CalcultorComponent},
@@ -35,10 +42,19 @@ const routes: Routes = [
    {path:'mail',component:MailComponent},
    {path:'weather',component:WeatherComponent},
   {path:'imagetask',component:ImagetaskComponent},
-  {path:'createvehicle',component:CreatevehicleComponent}
+  {path:'createvehicle',component:CreatevehicleComponent},
+  {path:'createstudent-cart',component:CreatestudentCartComponent},
+  {path:'addcard',component:AddcardComponent},
+  {path:'create-user',component:CreateUserComponent},
+  {path:'user-task',component:UserTaskComponent},
+  {path:'accountsusapi',component:AccountusapiComponent},
+  {path:'addacount',component:AddacountComponent},
+  {path:'login',component:LoginComponent},
 
 
-    
+
+
+
   ]},
   {path:'employe-data',component:EmployeDataComponent},
   {path:'**',component:ErrorComponent},

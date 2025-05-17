@@ -1,0 +1,39 @@
+<div class="parent-class">
+
+    <div>
+        <input type="text" [(ngModel)]="acountkey" (keyup)="acountsearch()">
+        <button class="btn btn-secondary btn-sm" routerLink="/dashbord/addacount">AddAcount</button>
+        
+    </div>
+
+    <table border="2" class="table table-success table-striped">
+   
+        <thead>
+            <tr>
+                <th>AccountName</th>
+                <th>AccountNumber</th>
+                <th>AvailableBalance</th>
+                <th>city</th>
+                <th>id</th>
+                <th>IFSC Code</th>
+                <th>Profile Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let accountdata of account">
+                <td>{{ accountdata.account_name}}</td>
+                <td>{{accountdata.account_number}}</td>
+                <td>{{accountdata.available_balance}}</td>
+                <td>{{accountdata.city}}</td>
+                <td>{{accountdata.id}}</td>
+                <td>{{accountdata.ifsc_code}}</td>
+                <img src="{{accountdata.profie_picture}}" alt="" width="100px" height="100px">
+            </tr>
+        </tbody>
+
+
+
+
+    </table>
+
+</div>

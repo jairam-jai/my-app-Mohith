@@ -1,11 +1,12 @@
 .parent {
     width: 100%;
-    height: 100%;
+    height: 120vh;
     background-color: green;
     display: flex;
     flex-wrap:wrap;
     gap: 20px;
     justify-content: center;
+    overflow: auto;
 }
 .child {
     width: 27%;

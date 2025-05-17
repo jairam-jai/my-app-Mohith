@@ -13,6 +13,7 @@
     flex-direction: column;
     gap: 5%;
     color: white;
+    overflow: auto;
 }
 .box-two {
     width: 80%;

@@ -1,6 +1,12 @@
 .overflow {
+    width: 100%;
+    height: 120vh;
     overflow: auto;
+    background-color: aquamarine;
    
+}
+.parent {
+    
 }
 .color-bar {
     color: rgb(2, 6, 10);
