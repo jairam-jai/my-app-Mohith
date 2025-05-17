@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-task',
@@ -22,7 +22,7 @@ export class UserTaskComponent {
 
 
   public usertaskform:FormGroup = new FormGroup({
-    name: new FormControl(),
+    name: new FormControl('',[Validators.required, Validators.minLength(6),Validators.maxLength(12)]),
     class:new FormControl(),
     fathername:new FormControl(),
     email: new FormControl(),
@@ -31,7 +31,7 @@ export class UserTaskComponent {
       addressline:new FormControl(),
       city:new FormControl(),
       state:new FormControl(),
-      pincode:new FormControl()
+      pincode:new FormControl('',[Validators.required, Validators.maxLength(6)])
     }),
     type:new FormControl(),
     marks:new FormArray([])
@@ -45,7 +45,7 @@ export class UserTaskComponent {
     this.marksArray.push(new FormGroup({
       class:new FormControl(),
       year:new FormControl(),
-      percentage:new FormControl()
+      percentage:new FormControl('',[Validators.required,Validators.minLength(0),Validators.maxLength(6)])
     }))
   }
 

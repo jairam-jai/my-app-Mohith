@@ -2,6 +2,12 @@
 <form  [formGroup]="usertaskform">
 <label for="">Name: </label>
 <input type="text" formControlName="name"><br>
+
+  <div *ngIf="usertaskform.get('name')?.touched && usertaskform.get('name')?.invalid">
+        <p *ngIf="usertaskform.get('name')?.errors?.['required']">Name: Should Requierd...</p>
+        <p *ngIf="usertaskform.get('name')?.errors?.['minlength']">Name: Should minimum 6 letters..</p>
+        <p *ngIf="usertaskform.get('name')?.errors?.['maxlength']">Name: Should minimum 12 letters...</p>
+    </div>
 <label for="">Class: </label>
 <input type="number" formControlName="class"><br>
 <label for="">FatherName: </label>
@@ -18,6 +24,10 @@
   <input type="text" formControlName="state"><br>
   <label for="">Pincode: </label>
 <input type="number" formControlName="pincode"><br>
+<div *ngIf="usertaskform.get('address.pincode')?.touched && usertaskform.get('address.pincode')?.invalid">
+    <p *ngIf="usertaskform.get('address.pincode')?.errors?.['required']">Pincode: Should Requierd... </p>
+    <p *ngIf="usertaskform.get('address.pincode')?.errors?.['maxlength']">Pincode Should mandatory 6 numbers</p>
+</div>
 
 </div>
 
@@ -55,6 +65,11 @@
             <input type="text" formControlName="year"><br>
              <label for="">Percentage:</label>
             <input type="text" formControlName="percentage"><br>
+            <div *ngIf="usertaskform.get('percentage')?.touched && usertaskform.get('percentage')?.invalid">
+                <p *ngIf="usertaskform.get('percentage')?.errors?.['required']">Percentage Should be Requierd</p>
+                <p *ngIf="usertaskform.get('percentage')?.errors?.['minlength']">Percentage Should be minimum 0...</p>
+                <p *ngIf="usertaskform.get('percentage')?.errors?.['maxlength']">Percentage Should be minimum 100...</p>
+            </div>
 
         </div>
         <button (click)="deletemark(i)">Delete</button>
