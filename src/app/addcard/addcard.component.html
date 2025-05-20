@@ -1,4 +1,6 @@
 <div>
+    <h1 *ngIf="!id">Add Student Card</h1>
+    <h1 *ngIf="id">Edit  Student Card</h1>
     
 </div>
 <form [formGroup]="newcard">

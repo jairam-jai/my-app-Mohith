@@ -27,6 +27,7 @@ export class UserTaskComponent {
     fathername:new FormControl(),
     email: new FormControl(),
     dob: new FormControl(),
+    mobile:new FormControl('',[Validators.required, Validators.min(1000000000),Validators.max(99999999999)]),
     address: new FormGroup({
       addressline:new FormControl(),
       city:new FormControl(),

@@ -41,4 +41,7 @@ export class StudentCartService {
   addstudent(data:any):Observable<any> {
    return this._httpclint.post('https://6128991386a213001729f9df.mockapi.io/test/v1/student',data)
   }
+   updatestudent(id:any, data:any):Observable<any> {
+   return this._httpclint.put('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id,data)
+  }
 }

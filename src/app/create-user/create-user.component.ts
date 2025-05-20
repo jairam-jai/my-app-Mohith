@@ -8,6 +8,7 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateUserComponent {
   //dynamic forms
+  showdata:boolean=false;
   constructor(){
     this.userform.get('type')?.valueChanges.subscribe((data:any)=>{
       if(data=='daySchool'){
@@ -23,7 +24,7 @@ export class CreateUserComponent {
 
   public userform:FormGroup = new FormGroup({
     name:new  FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(12)]),
-    mobile:new  FormControl(),
+    mobile:new  FormControl('',[Validators.required,Validators.minLength(0),Validators.maxLength(10)]),
     email:new  FormControl(),
     password:new  FormControl(),
     address:new FormGroup({
@@ -53,8 +54,13 @@ this.CardsFormsArry.push(new FormGroup({
 
 
   submit() {
-    console.log(this.userform);
+    console.log(this.userform.value);
 
   }
+  eye() {
+    this.showdata=!this.showdata;
+
+  }
+
 
 }

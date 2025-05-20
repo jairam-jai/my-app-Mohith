@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { VehiclesService } from '../vehicles.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-createvehicle',
@@ -9,7 +9,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./createvehicle.component.css']
 })
 export class CreatevehicleComponent {
-constructor(private _vehicleservice:VehiclesService,private _routerlink:Router) {}
+  id:any='';
+constructor(private _vehicleservice:VehiclesService,private _routerlink:Router, private _activedrouter:ActivatedRoute) {
+  _activedrouter.params.subscribe((data:any)=>{
+    console.log(data.id);
+    this.id=data.id;
+    if(this.id){
+        _vehicleservice.getvehicle(data.id).subscribe((data:any)=>{
+console.log(data);
+this.vechicleform.patchValue(data);
+    },(err:any)=>{
+      alert("Unable to fetch vehicle data")
+    })
+    }
+
+    
+  
+  })
+}
 
   public vechicleform:FormGroup = new FormGroup({
     Vehicle:new FormControl(),
@@ -23,7 +40,18 @@ constructor(private _vehicleservice:VehiclesService,private _routerlink:Router) 
     tyres:new FormControl(), 
   })
   submit() { 
-    console.log(this.vechicleform.value);
+if(this.id){
+
+  this._vehicleservice.updatevehicle(this.id,this.vechicleform.value).subscribe((data:any)=>{
+console.log(data);
+alert("Vehicle record update Successfully😍")
+this._routerlink.navigateByUrl("/dashbord/vehicles");
+  },(err:any)=>{
+    alert('Unable to update😒')
+  })
+
+}else{
+   console.log(this.vechicleform.value);
     this._vehicleservice.createvehicle(this.vechicleform.value).subscribe((data:any)=>{
       console.log(data);
       alert("Vehicle Created Sussessfully😀");
@@ -32,6 +60,10 @@ constructor(private _vehicleservice:VehiclesService,private _routerlink:Router) 
       alert('internal Server Error!');
     })
 
+
+}
+    
+   
   }
 
 }

@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  isvisible:Boolean=false;
+
 constructor(private _loginservice:LoginService,private _router:Router){}
 
   public loginform:FormGroup = new  FormGroup({
@@ -28,5 +30,8 @@ constructor(private _loginservice:LoginService,private _router:Router){}
     })
 
 
+  }
+  eye(){
+    this.isvisible=!(this.isvisible)
   }
 }

@@ -7,10 +7,11 @@
     <label for="email" class="label">Email</label>
     <input type="email" name="email" id="email" formControlName="email"
   /></span>
-  <span class="input-span">
-    <label for="password" class="label">Password</label>
-    <input type="password" name="password" id="password" formControlName="password"
-  /></span>
+  <div class="input-span">
+    <label for="password" class="label">Password:</label>
+    <input type="{{isvisible? 'text':'password'}}" name="password" id="password" formControlName="password"  />
+    <button (click)="eye()"><i class="{{isvisible? 'bi bi-eye-fill':'bi bi-eye-slash-fill'}}"></i></button>
+  </div>
   <button  (click)="  login()" >Login</button>
   <span class="span">Don't have an account? <a href="#">Sign up</a></span>
 </form>

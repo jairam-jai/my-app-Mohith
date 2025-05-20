@@ -11,10 +11,15 @@
 
     <label>Mobile: </label>
     <input type="number" formControlName="mobile"><br>
+     <div *ngIf="userform.get('mobile')?.touched && userform.get('mobile')?.invalid">
+        <p *ngIf="userform.get('mobile')?.errors?.['required']">Name: Should Requierd...</p>
+        <p *ngIf="userform.get('mobile')?.errors?.['minlength']">Name: Should minimum 10 letters..</p>
+        <p *ngIf="userform.get('mobile')?.errors?.['maxlength']">Name: Should minimum 10 letters...</p>
+    </div>
     <label>email: </label>
     <input type="email" formControlName="email"><br>
     <label>password: </label>
-    <input type="password" formControlName="password"><br>
+    <input type="{{showdata? 'password':'text'}}" formControlName="password"><button (click)="eye()"><i class="bi bi-eye-fill"></i></button><br>
     <div formGroupName="address">
         <label for="">City:</label>
         <input type="text" formControlName="city"><br>
@@ -52,6 +57,12 @@
         <div formGroupName="{{i}}">
             <label for="">number</label>
             <input type="number" formControlName="number">
+             <div *ngIf="userform.get(' number')?.touched && userform.get('number')?.invalid">
+        <p *ngIf="userform.get('number')?.errors?.['required']">Name: Should Requierd...</p>
+        <p *ngIf="userform.get('number')?.errors?.['minlength']">Name: Should minimum 10 letters..</p>
+        <p *ngIf="userform.get('number')?.errors?.['maxlength']">Name: Should minimum 10 letters...</p>
+    </div>
+
             <label for="">name:</label>
             <input type="text" formControlName="name">
              <label for="">Expiry</label>

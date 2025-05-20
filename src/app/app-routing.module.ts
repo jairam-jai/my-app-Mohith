@@ -47,6 +47,8 @@ const routes: Routes = [
   {path:'createvehicle',component:CreatevehicleComponent},
   {path:'createstudent-cart',component:CreatestudentCartComponent},
   {path:'addcard',component:AddcardComponent},
+  {path:'edite-student/:id',component:AddcardComponent},
+
   {path:'create-user',component:CreateUserComponent},
   {path:'user-task',component:UserTaskComponent},
   {path:'accountsusapi',component:AccountusapiComponent},
@@ -54,11 +56,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'vehicle-details/:id',component:VehicleDetailsComponent},
   {path:'view-student/:id',component:ViewStudentComponent},
-
-
-
-
-
+  {path:'edit-vehicle/:id',component:CreatevehicleComponent},
 
   ]},
   {path:'employe-data',component:EmployeDataComponent},
