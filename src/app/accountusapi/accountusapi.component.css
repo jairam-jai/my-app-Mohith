@@ -4,3 +4,7 @@
     background-color: black;
     overflow: auto;
 }
+h1 {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}

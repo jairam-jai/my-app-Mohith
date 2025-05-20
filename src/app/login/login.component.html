@@ -1,10 +1,18 @@
 <div>
 
-    <form [formGroup]="loginform">
 
-        <input type="email" placeholder="Enter you are mail" formControlName="email"><br>
-        <input type="password" value="" placeholder="Enter you are password" formControlName="password"><br>
+    <!-- From Uiverse.io by bociKond --> 
+<form class="form" [formGroup]="loginform">
+  <span class="input-span">
+    <label for="email" class="label">Email</label>
+    <input type="email" name="email" id="email" formControlName="email"
+  /></span>
+  <span class="input-span">
+    <label for="password" class="label">Password</label>
+    <input type="password" name="password" id="password" formControlName="password"
+  /></span>
+  <button  (click)="  login()" >Login</button>
+  <span class="span">Don't have an account? <a href="#">Sign up</a></span>
+</form>
 
-        <button (click)="login()">Login</button>
-    </form>
 </div>

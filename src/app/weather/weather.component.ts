@@ -11,7 +11,7 @@ export class WeatherComponent {
   constructor(private _weatherService:WeatherService) {
       
     _weatherService.getweather().subscribe((data:any)=>{
-      console.log(_weatherService);
+      console.log(data);
       this.weatherdata=data;
       console.log(this.weatherdata);
     })

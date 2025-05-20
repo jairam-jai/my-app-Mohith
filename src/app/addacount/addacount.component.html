@@ -1,5 +1,18 @@
 <div>
 
-<label for=""></label>
+
+    <form [formGroup]="acountform">
+        <label for="">Acount Name:</label>
+        <input type="text" formControlName="account_name"><br>
+         <label for="">Acount Number:</label>
+        <input type="number" formControlName="account_number"><br>
+          <label for="">Acount Balance:</label>
+        <input type="number" formControlName="available_balance"><br>
+         <label for="">Acounter City:</label>
+        <input type="text" formControlName="city"><br>
+        <label for="">Acounter Profilepicture:</label>
+        <input type="text" formControlName="profie_picture"><br>
+        <button (click)="submit()">Submit</button>
+    </form>
 
 </div>

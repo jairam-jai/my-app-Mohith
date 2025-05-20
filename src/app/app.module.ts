@@ -30,6 +30,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserTaskComponent } from './user-task/user-task.component';
 import { AccountusapiComponent } from './accountusapi/accountusapi.component';
 import { AddacountComponent } from './addacount/addacount.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
 
 
 @NgModule({
@@ -59,6 +61,8 @@ import { AddacountComponent } from './addacount/addacount.component';
     UserTaskComponent,
     AccountusapiComponent,
     AddacountComponent,
+    VehicleDetailsComponent,
+    ViewStudentComponent,
   
   ],
   imports: [

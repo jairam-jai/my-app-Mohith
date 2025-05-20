@@ -25,6 +25,8 @@ import { UserTaskComponent } from './user-task/user-task.component';
 import { AccountusapiComponent } from './accountusapi/accountusapi.component';
 import { AddacountComponent } from './addacount/addacount.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -50,6 +52,9 @@ const routes: Routes = [
   {path:'accountsusapi',component:AccountusapiComponent},
   {path:'addacount',component:AddacountComponent},
   {path:'login',component:LoginComponent},
+  {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+  {path:'view-student/:id',component:ViewStudentComponent},
+
 
 
 

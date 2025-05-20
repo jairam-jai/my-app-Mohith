@@ -64,17 +64,17 @@
 
     <div class="text-button">
         <div class="city-view">
-            <h6>Sehool.city:{{data.school_city}}</h6>
-        <button class="btn btn-warning btn-sm" >View</button>
+            <h6>School.city:{{data.school_city}}</h6>
+        <button class="btn btn-warning btn-sm" routerLink="/dashbord/view-student/{{data.id}}">View</button>
 
         </div>
         
         <div class="edite">
-        <button class="btn btn-primary btn-sm">Edite</button>
+        <button class="btn btn-primary btn-sm" >Edite</button>
         </div>
 
         <div class="delete">
-            <h6>Sehool Pin:{{data.school_pin}}</h6>
+            <h6>School Pin:{{data.school_pin}}</h6>
             <div class="button-class">
              <button class=" btn btn-danger btn-sm " (click)="deletecard(data.id)">Delete</button>
             </div>

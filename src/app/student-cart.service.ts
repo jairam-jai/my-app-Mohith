@@ -13,6 +13,11 @@ export class StudentCartService {
    return this._httpclint.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student')
   }
 
+  
+  getcard(id:any):Observable<any> {
+   return this._httpclint.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student/'+id)
+  }
+
   filtercart(filterdata:any):Observable<any> {
    return this._httpclint.get('https://6128991386a213001729f9df.mockapi.io/test/v1/student?filter='+filterdata)
   }

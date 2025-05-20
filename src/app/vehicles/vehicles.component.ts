@@ -13,7 +13,7 @@ export class VehiclesComponent {
   }
    
   relode() {
-  this._vehicleService.getvehicle().subscribe((data:any)=>{
+  this._vehicleService.getvehicles().subscribe((data:any)=>{
       console.log(data);
       this.vehicles=data;
       console.log(this.vehicles);

@@ -1,8 +1,43 @@
 <div class="parent-class">
+    <h1>Acount Details</h1>
 
     <div>
         <input type="text" [(ngModel)]="acountkey" (keyup)="acountsearch()">
         <button class="btn btn-secondary btn-sm" routerLink="/dashbord/addacount">AddAcount</button>
+
+        <select [(ngModel)]="column">
+            <option value="account_name">AccounterName</option>
+            <option value="account_number">AccountNumber</option>
+            <option value="city">City</option>
+        </select>
+
+        <select [(ngModel)]="order">
+            <option value="asc">Assending order</option>
+            <option value="desc">Dissending Order</option>
+        </select>
+
+        <button (click)="acountsort()" class="btn btn-success">Click</button>
+
+        <select [(ngModel)]="limit">
+            <option value="10">10</option>
+             <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="30">60</option>
+             <option value="50">50</option>
+
+        </select>
+
+             <select [(ngModel)]="page">
+            <option value="1">1</option>
+             <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button (click)="acountpage()" class="btn btn-info">PageAcount</button>
+
+
+        
         
     </div>
 
@@ -16,7 +51,8 @@
                 <th>city</th>
                 <th>id</th>
                 <th>IFSC Code</th>
-                <th>Profile Picture</th>
+                <th>ProfilePicture</th>
+                <th>Cloge</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +64,7 @@
                 <td>{{accountdata.id}}</td>
                 <td>{{accountdata.ifsc_code}}</td>
                 <img src="{{accountdata.profie_picture}}" alt="" width="100px" height="100px">
+                <td><button class="btn btn-danger" (click)="deleteacount(accountdata.id)">Delete</button></td>
             </tr>
         </tbody>
 

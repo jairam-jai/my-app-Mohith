@@ -9,7 +9,10 @@ import { AccountsapiService } from '../accountsapi.service';
 export class AccountusapiComponent {
 account:any=[];
 constructor(private _accounts:AccountsapiService) {
-  _accounts.getacount().subscribe((data:any)=>{
+  this.relode();
+}
+  relode(){
+ this._accounts.getacount().subscribe((data:any)=>{
     // console.log(data);
     this.account=data;
     console.log(this.account);
@@ -21,12 +24,47 @@ acountkey:any='';
 acountsearch() {
   this._accounts.searchacount(this.acountkey).subscribe((data:any)=>{
     console.log(data);
-    this.acountkey=data
+    this.account=data;
   },(err:any)=>{
     alert("Internal Server Error");
 
   })
 
 }
+column:any='';
+order:any='';
+acountsort() {
+  this._accounts.acountsort(this.column,this.order).subscribe((data:any)=>{
+    console.log(data);
+    this.account=data;
+  })
+}
+
+limit:any='';
+page:any='';
+
+acountpage() {
+  this._accounts.pagenaactionacount(this.limit,this.page).subscribe((data:any)=>{
+    console.log(data);
+    this.account=data
+  },(err:any)=>{
+    alert('Internal Server Error!');
+  })
+}
+
+deleteacount(id:number) {
+  if(confirm("Are you sure for Delete!")==true) {
+    this._accounts.deleteacount(id).subscribe((data:any)=>{
+      console.log(data);
+      alert('you are acount is deleted..')
+      this.relode();
+    },(err:any)=>{
+      alert("Internal Server  Error!..")
+    })
+  }
+
+
+}
+
 
 }

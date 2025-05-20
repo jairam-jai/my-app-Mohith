@@ -65,10 +65,10 @@
             <input type="text" formControlName="year"><br>
              <label for="">Percentage:</label>
             <input type="text" formControlName="percentage"><br>
-            <div *ngIf="usertaskform.get('percentage')?.touched && usertaskform.get('percentage')?.invalid">
-                <p *ngIf="usertaskform.get('percentage')?.errors?.['required']">Percentage Should be Requierd</p>
-                <p *ngIf="usertaskform.get('percentage')?.errors?.['minlength']">Percentage Should be minimum 0...</p>
-                <p *ngIf="usertaskform.get('percentage')?.errors?.['maxlength']">Percentage Should be minimum 100...</p>
+            <div *ngIf="usertaskform.get('marksArray.controls[i].percentage')?.touched && usertaskform.get('percentage')?.invalid">
+                <p *ngIf="usertaskform.get('marksArray.controls[i].percentage')?.errors?.['required']">Percentage Should be Requierd</p>
+                <p *ngIf="usertaskform.get('marksArray.controls[i].percentage')?.errors?.['minlength']">Percentage Should be minimum 0...</p>
+                <p *ngIf="usertaskform.get('marksArray.controls[i].percentage')?.errors?.['maxlength']">Percentage Should be minimum 100...</p>
             </div>
 
         </div>
