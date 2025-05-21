@@ -29,6 +29,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { ViewStudentComponent } from './view-student/view-student.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ParentComponent } from './parent/parent.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -61,6 +62,8 @@ const routes: Routes = [
   {path:'edit-vehicle/:id',component:CreatevehicleComponent},
   {path:'communication',component:CommunicationComponent}, 
    {path:'parent',component:ParentComponent}, 
+    {path:'sibling1',component:Sibling1Component}, 
+
 
 
   ]},

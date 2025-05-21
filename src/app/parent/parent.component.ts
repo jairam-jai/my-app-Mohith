@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 export class ParentComponent {
 store(value:any) {
 alert(value);
+}
+
+rating:any='';
+ratingshow(data:any) {
+this.rating=data
 }
 }

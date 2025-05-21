@@ -23,7 +23,7 @@ constructor(private _loginservice:LoginService,private _router:Router){}
     this._loginservice.loginpost(this.loginform.value).subscribe((data:any)=>{
       alert(this.loginform=data)
       this.loginform=data
-      this._router.navigateByUrl('/dashbord')
+      this._router.navigateByUrl('/dashbord');
       sessionStorage.setItem('tokenbr',data.token)
     },(err:any)=>{
       alert('Internal Server Error!');

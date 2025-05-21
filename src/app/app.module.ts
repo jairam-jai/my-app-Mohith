@@ -35,6 +35,9 @@ import { ViewStudentComponent } from './view-student/view-student.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -69,6 +72,9 @@ import { ChildComponent } from './child/child.component';
     CommunicationComponent,
     ParentComponent,
     ChildComponent,
+    Sibling1Component,
+    Sibling2Component,
+    RatingComponent,
   
   ],
   imports: [
