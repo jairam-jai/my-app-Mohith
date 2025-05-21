@@ -32,6 +32,9 @@ import { AccountusapiComponent } from './accountusapi/accountusapi.component';
 import { AddacountComponent } from './addacount/addacount.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -63,6 +66,9 @@ import { ViewStudentComponent } from './view-student/view-student.component';
     AddacountComponent,
     VehicleDetailsComponent,
     ViewStudentComponent,
+    CommunicationComponent,
+    ParentComponent,
+    ChildComponent,
   
   ],
   imports: [

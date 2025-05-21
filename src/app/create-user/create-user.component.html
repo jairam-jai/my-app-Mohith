@@ -19,7 +19,7 @@
     <label>email: </label>
     <input type="email" formControlName="email"><br>
     <label>password: </label>
-    <input type="{{showdata? 'password':'text'}}" formControlName="password"><button (click)="eye()"><i class="bi bi-eye-fill"></i></button><br>
+    <input type="{{showdata? 'password':'text'}}" formControlName="password"><button (click)="eye()"><i class="{{showdata? 'bi bi-eye-fill':'bi bi-eye-slash-fill'}}"></i></button><br>
     <div formGroupName="address">
         <label for="">City:</label>
         <input type="text" formControlName="city"><br>

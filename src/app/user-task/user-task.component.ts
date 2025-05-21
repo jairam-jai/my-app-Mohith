@@ -46,7 +46,7 @@ export class UserTaskComponent {
     this.marksArray.push(new FormGroup({
       class:new FormControl(),
       year:new FormControl(),
-      percentage:new FormControl('',[Validators.required,Validators.minLength(0),Validators.maxLength(6)])
+      percentage:new FormControl('',[Validators.required,Validators.min(0),Validators.max(6)])
     }))
   }
 

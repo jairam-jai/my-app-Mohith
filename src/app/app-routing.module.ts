@@ -27,6 +27,8 @@ import { AddacountComponent } from './addacount/addacount.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -57,6 +59,9 @@ const routes: Routes = [
   {path:'vehicle-details/:id',component:VehicleDetailsComponent},
   {path:'view-student/:id',component:ViewStudentComponent},
   {path:'edit-vehicle/:id',component:CreatevehicleComponent},
+  {path:'communication',component:CommunicationComponent}, 
+   {path:'parent',component:ParentComponent}, 
+
 
   ]},
   {path:'employe-data',component:EmployeDataComponent},
