@@ -2,7 +2,7 @@
 
 <form  [formGroup]="userform">
     <label>Name: </label>
-    <input type="text" formControlName="name"><br>
+    <input type="text" formControlName="name"  appCapital><br>
     <div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
         <p *ngIf="userform.get('name')?.errors?.['required']">Name: Should Requierd...</p>
         <p *ngIf="userform.get('name')?.errors?.['minlength']">Name: Should minimum 6 letters..</p>
