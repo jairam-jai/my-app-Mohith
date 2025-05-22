@@ -32,6 +32,7 @@
     <tbody>
         <tr *ngFor="let detel of detiles">
             <td>{{detel.name}}</td>
+            <!-- atribute directives -->
             <!-- <td [ngStyle]="{'color':detel.number<=400?'green':'red'}">{{detel.number}}</td> -->
             <td [ngClass]="{'green':detel.email>3.5, 'yellow':((detel.email>2.5)&&(detel.email<=3.5)),'red':(detel.email<=2.5)}">{{detel.email}}</td>
 

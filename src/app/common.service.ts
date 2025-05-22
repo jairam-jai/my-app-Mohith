@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CommonService {
 
-  constructor() { }
+  constructor() {}
 
   public countsubjuct:BehaviorSubject<number>= new BehaviorSubject(0);
 }
