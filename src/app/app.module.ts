@@ -18,7 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeDataComponent } from './employe-data/employe-data.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FlipcartComponent } from './flipcart/flipcart.component';
 import { MailComponent } from './mail/mail.component';
 import { WeatherComponent } from './weather/weather.component';
@@ -39,6 +39,8 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
+import { InrPipe } from './inr.pipe';
+import { UsetokenInterceptor } from './usetoken.interceptor';
 
 
 @NgModule({
@@ -77,6 +79,7 @@ import { CapitalDirective } from './capital.directive';
     Sibling2Component,
     RatingComponent,
     CapitalDirective,
+    InrPipe,
   
   ],
   imports: [
@@ -86,7 +89,10 @@ import { CapitalDirective } from './capital.directive';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,
+    useClass:UsetokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

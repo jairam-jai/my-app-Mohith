@@ -12,5 +12,5 @@ export class Sibling2Component {
       this.count=data
     })
   }
-count:number=100;
+count:any='';
 }

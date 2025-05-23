@@ -18,6 +18,13 @@
     </div>
     <label>email: </label>
     <input type="email" formControlName="email"><br>
+     <div *ngIf="userform.get('email')?.touched && userform.get('email')?.invalid">
+        <p *ngIf="userform.get('email')?.errors?.['required']">Name: Should Requierd...</p>
+        <p *ngIf="userform.get('email')?.errors?.['minlength']">Name: Should minimum 12 letters..</p>
+        <p *ngIf="userform.get('email')?.errors?.['maxlength']">Name: Should minimum 20 letters...</p>
+        <p *ngIf="userform.get('email')?.errors?.['mail']">Place Use Valibule Mail...</p>
+
+    </div>
     <label>password: </label>
     <input type="{{showdata? 'password':'text'}}" formControlName="password"><button (click)="eye()"><i class="{{showdata? 'bi bi-eye-fill':'bi bi-eye-slash-fill'}}"></i></button><br>
     <div formGroupName="address">
