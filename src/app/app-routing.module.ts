@@ -64,11 +64,14 @@ const routes: Routes = [
    {path:'parent',component:ParentComponent}, 
     {path:'sibling1',component:Sibling1Component}, 
 
-
-
   ]},
+   {
+    path:'payments',
+    loadChildren:()=>import('./payments/payments.module').then(m=>m.PaymentsModule)
+  },
   {path:'employe-data',component:EmployeDataComponent},
   {path:'**',component:ErrorComponent},
+ 
  
   
 ];

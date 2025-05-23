@@ -41,6 +41,7 @@ import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { UsetokenInterceptor } from './usetoken.interceptor';
+import { AboutModule } from './about/about.module';
 
 
 @NgModule({
@@ -87,7 +88,8 @@ import { UsetokenInterceptor } from './usetoken.interceptor';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [{provide:HTTP_INTERCEPTORS,
     useClass:UsetokenInterceptor,
