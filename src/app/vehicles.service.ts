@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VehiclesService {
+// baseUrl:any='/assets/data.json';
 
   constructor(private _httpclint:HttpClient) { }
   getvehicles():Observable<any> {

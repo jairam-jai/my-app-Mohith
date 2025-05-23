@@ -58,7 +58,7 @@
             <!-- <td>{{i+1}}</td> -->
             <td>{{data.Vehicle| uppercase}}</td>
             <td [ngStyle]="{'color':data.expression<7?'green':'red'}">{{data.color}}</td>
-            <td>{{data.cost}}</td>
+            <td>{{data.cost|inr}}</td>
             <td>{{data.fuel}}</td>
             <td>{{data.id}}</td>
             <td><img src="{{data.image}}" alt=""></td> 
