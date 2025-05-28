@@ -42,6 +42,11 @@ import { CapitalDirective } from './capital.directive';
 import { InrPipe } from './inr.pipe';
 import { UsetokenInterceptor } from './usetoken.interceptor';
 import { AboutModule } from './about/about.module';
+import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
+import { CompnyComponent } from './compny/compny.component';
+import { AddcompanyComponent } from './addcompany/addcompany.component';
+import { CompanyloginComponent } from './companylogin/companylogin.component';
+import { ViewcompanyComponent } from './viewcompany/viewcompany.component';
 
 
 @NgModule({
@@ -81,6 +86,11 @@ import { AboutModule } from './about/about.module';
     RatingComponent,
     CapitalDirective,
     InrPipe,
+    LifecyclehookComponent,
+    CompnyComponent,
+    AddcompanyComponent,
+    CompanyloginComponent,
+    ViewcompanyComponent,
   
   ],
   imports: [

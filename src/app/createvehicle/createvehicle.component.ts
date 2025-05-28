@@ -59,11 +59,7 @@ this._routerlink.navigateByUrl("/dashbord/vehicles");
     }, (err:any)=> {
       alert('internal Server Error!');
     })
-
-
-}
-    
-   
+} 
   }
 
 }

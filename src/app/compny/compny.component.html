@@ -1,0 +1,84 @@
+<div class="parent">
+<!-- filtering -->
+<input type="text"[(ngModel)]="compnayKey" (keyup)="searchcompany()">
+<button routerLink="/dashbord/addcompany">AddNew</button>
+<!-- sorting -->
+    <div  class="child-one">
+        <select [(ngModel)]="column">
+            <option value="name">Name</option>
+            <option value="company">CompanyName</option>
+            <option value="email">Email</option>
+            <option value="state">State</option>
+            <option value="role">Role</option>
+        </select>
+
+        <select [(ngModel)]="order">
+    <option value="asc">Assending order</option>
+    <option value="desc">Dissending Order</option>
+   
+</select>
+<button (click)="sorting()">SortCompany</button>
+
+
+    <!-- pagenaction -->
+     <select [(ngModel)]="lemit">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+        <option value="50">50</option>
+
+     </select>
+     <select [(ngModel)]="page">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+     </select>
+     <button (click)="pagenaction()">CmpanyPage</button>
+     
+    </div>
+    <table border="2"  class="table table-dark table-borderless">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>DateofBirth</th>
+            <th>Gender</th>
+            <th>CompanyName</th>
+            <th>Role</th>
+            <th>Package</th>
+            <th>Type</th>
+            <th>WorkMode</th>
+            <th>city</th>
+            <th>Pincode</th>
+            <th>State</th>
+            <th colspan="2">Ar</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let compnaydata of company">
+            <td>{{compnaydata.name}}</td>
+            <td>{{compnaydata.email}}</td>
+            <td>{{compnaydata.dob}}</td>
+            <td>{{compnaydata.gender}}</td>
+            <td>{{compnaydata.company}}</td>
+            <td>{{compnaydata.role}}</td>
+            <td [ngStyle]="{'color':compnaydata.package>900000?'green':'red'}">{{compnaydata.package}}</td>
+            <td>{{compnaydata.type}}</td>
+            <td>{{compnaydata.workMode}}</td>
+            <td>{{compnaydata.address.city}}</td>
+            <td>{{compnaydata.address.pincode}}</td>
+            <td>{{compnaydata.address.state}}</td>
+            <td><Button routerLink="/dashbord/viewcompany/{{compnaydata.id}}" class="btn btn-warning">View</Button></td>
+            <td><button class="btn btn-danger " (click)="delete(compnaydata.id)">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
