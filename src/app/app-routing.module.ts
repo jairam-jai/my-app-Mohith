@@ -30,6 +30,11 @@ import { ViewStudentComponent } from './view-student/view-student.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { ParentComponent } from './parent/parent.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
+import { LifecyclehookComponent } from './lifecyclehook/lifecyclehook.component';
+import { CompnyComponent } from './compny/compny.component';
+import { AddcompanyComponent } from './addcompany/addcompany.component';
+import { CompanyloginComponent } from './companylogin/companylogin.component';
+import { ViewcompanyComponent } from './viewcompany/viewcompany.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -63,6 +68,11 @@ const routes: Routes = [
     {path:'communication',component:CommunicationComponent}, 
     {path:'parent',component:ParentComponent}, 
     {path:'sibling1',component:Sibling1Component}, 
+    {path:'lifecyclehook',component:LifecyclehookComponent},
+    {path:'compny',component:CompnyComponent},
+    {path:'addcompany',component:AddcompanyComponent},
+    {path:'companylogin',component:CompanyloginComponent},
+    {path:'viewcompany/:id',component:ViewcompanyComponent}
 
   ]},
   // lagy loading 

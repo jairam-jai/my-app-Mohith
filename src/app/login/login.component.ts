@@ -15,7 +15,7 @@ constructor(private _loginservice:LoginService,private _router:Router){}
 
   public loginform:FormGroup = new  FormGroup({
     email:new FormControl(),
-    password:new FormControl()
+    password:new FormControl(),
   })
 
   login() {
