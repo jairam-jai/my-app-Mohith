@@ -16,17 +16,17 @@
     <!-- Gender -->
  <label for="">Gender: </label>
     <label for="male">Male</label>
-    <input type="radio" name="type" formControlName="gender" value="Mail">
+    <input type="radio" name="gender" formControlName="gender" value="Mail">
      <label for="">femail</label>
-    <input type="radio" name="type" formControlName="gender"  value="femail"><br>
+    <input type="radio" name="gender" formControlName="gender"  value="femail"><br>
 
 
     <!-- WorkMode -->
     <label for="">WorkMode:</label>
     <label for="remote">Remote</label>
-    <input type="radio" formControlName="workMode" value="remote" name="type">
+    <input type="radio" formControlName="workMode" value="remote" name="workMode">
     <label for="workfromoffice">WorkfromOffice</label>
-    <input type="radio" formControlName="workMode" value="workfromoffice" name="type">
+    <input type="radio" formControlName="workMode" value="workfromoffice" name="workMode">
 
     <div *ngIf="companyform.get('workMode')?.value=='workfromoffice'">
       <label for="" >travileFee</label>

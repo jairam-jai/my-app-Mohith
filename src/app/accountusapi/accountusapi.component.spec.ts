@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { AccountusapiComponent } from './accountusapi.component';
+import { FormsModule } from '@angular/forms';
 
 describe('AccountusapiComponent', () => {
   let component: AccountusapiComponent;
@@ -8,7 +10,8 @@ describe('AccountusapiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AccountusapiComponent ]
+      declarations: [ AccountusapiComponent ],
+      imports: [ HttpClientTestingModule, FormsModule ] 
     })
     .compileComponents();
 

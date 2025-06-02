@@ -13,7 +13,6 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { from, fromEvent } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeDataComponent } from './employe-data/employe-data.component';
@@ -39,6 +38,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { RatingComponent } from './rating/rating.component';
 import { CapitalDirective } from './capital.directive';
+
 import { InrPipe } from './inr.pipe';
 import { UsetokenInterceptor } from './usetoken.interceptor';
 import { AboutModule } from './about/about.module';
@@ -47,6 +47,7 @@ import { CompnyComponent } from './compny/compny.component';
 import { AddcompanyComponent } from './addcompany/addcompany.component';
 import { CompanyloginComponent } from './companylogin/companylogin.component';
 import { ViewcompanyComponent } from './viewcompany/viewcompany.component';
+
 
 
 @NgModule({
@@ -91,7 +92,6 @@ import { ViewcompanyComponent } from './viewcompany/viewcompany.component';
     AddcompanyComponent,
     CompanyloginComponent,
     ViewcompanyComponent,
-  
   ],
   imports: [
     BrowserModule,

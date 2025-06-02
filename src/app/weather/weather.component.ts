@@ -7,7 +7,7 @@ import { WeatherService } from '../weather.service';
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent {
-  weatherdata:any=[];
+  weatherdata:any={};
   constructor(private _weatherService:WeatherService) {
       
     _weatherService.getweather().subscribe((data:any)=>{

@@ -1,6 +1,6 @@
 <div class="parent">
 
-    <p class="time-today"> Time:{{weatherdata.current_weather.time}} | {{weatherdata.current_weather_units.time}}</p>
+    <p class="time-today"> Time:{{weatherdata?.time}} | {{weatherdata?.time}}</p>
     <h3>Weather in Hyderabad</h3>
     <div class="sun green"[ngClass]="{'blue':weatherdata.current_weather.temperature<0, 'yellow': (weatherdata.current_weather.temperature>0)&& 
     (weatherdata.current_weather.temperature<=30 ), 'green':(weatherdata.current_weather.temperature>30)&& (weatherdata.current_weather.temperature<35), 

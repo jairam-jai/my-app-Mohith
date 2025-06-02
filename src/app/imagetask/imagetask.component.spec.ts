@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ImagetaskComponent } from './imagetask.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ImagetaskService } from '../imagetask.service';
 
 describe('ImagetaskComponent', () => {
   let component: ImagetaskComponent;
@@ -8,7 +10,9 @@ describe('ImagetaskComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ImagetaskComponent ]
+      declarations: [ ImagetaskComponent ],
+      imports: [HttpClientTestingModule], // ✅ Required for HttpClient
+      providers: [ImagetaskService]
     })
     .compileComponents();
 
