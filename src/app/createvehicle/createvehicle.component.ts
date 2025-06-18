@@ -22,12 +22,8 @@ this.vechicleform.patchValue(data);
       alert("Unable to fetch vehicle data")
     })
     }
-
-    
-  
   })
 }
-
   public vechicleform:FormGroup = new FormGroup({
     Vehicle:new FormControl(),
     color:new FormControl(),

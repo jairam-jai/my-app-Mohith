@@ -6,6 +6,6 @@ if(control.value.includes('@mohith.com')){
     return null;
 
 }else {
-    return {'mail':'place use valibul mail'}
+    return {'mail':'place use valuable mail'}
 }
 }

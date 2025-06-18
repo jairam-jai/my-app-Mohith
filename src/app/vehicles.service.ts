@@ -11,7 +11,7 @@ export class VehiclesService {
   constructor(private _httpclint:HttpClient) { }
   getvehicles():Observable<any> {
     return this._httpclint.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction')
-  }
+  }   
 
     getvehicle(id:any):Observable<any> {
     return this._httpclint.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id)

@@ -33,7 +33,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashbord',component:DashbordComponent,canActivate:[AuthenticationGuard],children:[
+  {path:'dashbord',component:DashbordComponent,canActivate:[],children:[
     {path:'',component:HomeComponent},
     {path:'wellcome',component:WellcomeComponent},
     {path:'calcultor',component:CalcultorComponent},

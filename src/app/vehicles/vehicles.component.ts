@@ -7,15 +7,19 @@ import { VehiclesService } from '../vehicles.service';
   styleUrls: ['./vehicles.component.css']
 })
 export class VehiclesComponent {
+  isloding:boolean=false;
+
   vehicles:any=[];
   constructor(private _vehicleService:VehiclesService) {
     this.relode();
   }
    
   relode() {
+    this.isloding=true;
   this._vehicleService.getvehicles().subscribe((data:any)=>{
       console.log(data);
       this.vehicles=data;
+      this.isloding=false;
       console.log(this.vehicles);
     },(err:any)=>{
       alert("Internal Server Error!")
@@ -72,5 +76,13 @@ export class VehiclesComponent {
   }
     }
 
-   
+
+loding() {
+  this._vehicleService.getvehicles().subscribe((data:any)=>{
+    this.isloding=false;
+    this.vehicles=data;
+    console.log(this.vehicles);
+  })
+
+}
 }

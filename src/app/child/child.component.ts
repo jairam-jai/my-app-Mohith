@@ -6,13 +6,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-  // @Input()a:any='';
-  // @Output() bevent :EventEmitter<any>= new EventEmitter();
+  @Input()a:any='';
+  @Output() bevent :EventEmitter<any>= new EventEmitter();
 
 
-  // send() {
-  //   this.bevent.emit('Hello ram');
-  // }
+  send() {
+    this.bevent.emit('Hello ram');
+  }
 
 @Input() role:string='';
 

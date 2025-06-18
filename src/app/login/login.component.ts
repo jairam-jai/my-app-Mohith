@@ -19,7 +19,7 @@ constructor(private _loginservice:LoginService,private _router:Router){}
   })
 
   login() {
-    // console.log(this.loginform);
+    console.log(this.loginform.value);
     this._loginservice.loginpost(this.loginform.value).subscribe((data:any)=>{
       alert(this.loginform=data)
       this.loginform=data
